@@ -1,0 +1,9 @@
+<h2>워드 카운트</h2>
+
+<a href="{% url 'about' %}">go to about page</a>
+
+<form action="{% url 'count' %}">
+    <textarea cols="40" rows="10" name="fulltext"></textarea>
+    <br>
+    <input type="submit" value="Count~!"/>
+</form>
