@@ -45,7 +45,7 @@ ROOT_URLCONF = 'firstproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['wordcount/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -109,3 +109,15 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS= [
+    os.path.join(BASE_DIR, 'wordcount', 'static')
+]   # static 파일들이 현재 어디에 있는지를 쓰는 곳
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# static 파일들이 어디로 모일 것인지를 쓰는 곳
+
+# 사용자가 올리는 이미지 파일 에 대한 경로설정
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+MEDIA_URL = '/media/'

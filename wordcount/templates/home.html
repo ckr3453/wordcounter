@@ -1,0 +1,39 @@
+{% extends 'base.html'%}
+
+{% block contents %}
+
+  <!-- start section about us -->
+  <div id="about" class="paddsection">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-lg-4 ">
+          <div class="div-img-bg">
+            <div class="about-img">
+              <div class="wrap">
+              <form action="{% url 'count' %}">
+                <textarea id="content" cols="40" rows="10" name="fulltext"></textarea>
+                <span id="counter"></span>
+                <br>
+                <div style="margin-left: 75%">
+                  <input type="submit" value="Count!"/>
+                </div>
+              </form>
+            </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="about-descr">
+
+            <p class="p-heading">몇개의 단어가 몇번 쓰였는지 알려드립니다!</p>
+            <p class="separator">likelion first project "word counter"</p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end section about us -->
+{% endblock %}

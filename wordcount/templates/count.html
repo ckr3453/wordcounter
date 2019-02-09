@@ -1,0 +1,49 @@
+{% extends 'base.html'%}
+
+{% block contents %}
+
+  <!-- start section about us -->
+  <div id="about" class="paddsection">
+    <div class="container">
+      <div class="row justify-content-between">
+        <div class="col-lg-4 ">
+          <div class="div-img-bg">
+            <div class="about-img">
+                {{ fulltext }}
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-7">
+          <div class="about-descr">
+
+            <p class="p-heading">당신이 입력한 문장입니다! </p>
+            <p class="separator">당신이 입력한 단어는 총 {{total}}개의 단어로 구성되어 있습니다.</p>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end section about us -->
+
+  <div id="about" class="paddsection" >
+        <div class="container">
+          <div class="row justify-content-between">
+            <div class="col-lg-4 ">
+              <div class="div-img-bg">
+                <div class="about-img">
+                    {% for word, countword in dictionary %}
+                    {{word}} - {{countword}}
+                    <br>
+                    {% endfor %}                
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+{% endblock %}
